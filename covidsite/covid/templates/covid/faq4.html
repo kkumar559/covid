@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -9,15 +11,15 @@
         <title>FREQUENTLY ASKED QUESTIONS</title>
         <meta name="description" content="page answers the faqs related to COVID-19 ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" href="{% static 'covid/w3.css' %}">
     </head>
     <body>
         <div class="w3-container w3-pale-blue">
             <div class="w3-bar w3-blue">
-                <a href="index.html" class="w3-bar-item w3-button w3-padding">HOME</a>
-                <a href="" class="w3-bar-item w3-button w3-padding">Link 1</a>
-                <a href="faq1.html" class="w3-bar-item w3-button w3-padding">FAQ</a>
-                <a href="about.html" class="w3-bar-item w3-button w3-padding">ABOUT US</a>
+                <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding ">HOME</a>
+                <a href="" class="w3-bar-item w3-button w3-padding">EXPLORE</a>
+                <a href="{% url 'faq1' %}" class="w3-bar-item w3-button w3-padding">FAQ</a>
+                <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-padding">ABOUT US</a>
             </div>
         <header>
 
@@ -82,11 +84,10 @@ different conditions and temperature is also low.
         </main>
         <div class="w3-show-inline-block">
             <div class="w3-bar w3-border w3-border-black">
-                <a href="faq1.html" class="w3-button w3-bar-item">1</a>
-                <a href="faq2.html" class="w3-button w3-bar-item">2</a>
-                <a href="faq3.html" class="w3-button w3-bar-item">3</a>
-                <a href="faq4.html" class="w3-button w3-bar-item w3-green">4</a>
-        
+                <a href="{% url 'faq1' %}" class="w3-button w3-bar-item">1</a>
+                <a href="{% url 'faq2' %}" class="w3-button w3-bar-item">2</a>
+                <a href="{% url 'faq3' %}" class="w3-button w3-bar-item">3</a>
+                <a href="{% url 'faq4' %}" class="w3-button w3-bar-item w3-green">4</a>        
     
               </div>
               </div>
@@ -97,6 +98,6 @@ different conditions and temperature is also low.
             <strong><p>NOTE-The above metioned recommendations were borrowed from CDC and Ministry of health and family welfare,Government of India.<br> Kindly <a href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html">click on the link</a> to visit their website for latest accurate information.</p></strong>
 
         </footer>
-        <script src="index.js" async defer></script>
+        <script src="{% static 'covid/index.js' %}" async defer></script>
     </body>
 </html>

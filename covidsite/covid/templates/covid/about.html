@@ -1,3 +1,6 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -9,16 +12,16 @@
         <title>ABOUT</title>
         <meta name="description" content="page describes about our work">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" href="{% static 'covid/w3.css' %}">
     </head>
     <body>
         <div class="w3-container w3-pale-blue">
            <main> 
             <div class="w3-bar w3-blue">
-                <a href="index.html" class="w3-bar-item w3-button w3-padding ">HOME</a>
-                <a href="" class="w3-bar-item w3-button w3-padding">Link 1</a>
-                <a href="faq1.html" class="w3-bar-item w3-button w3-padding">FAQ</a>
-                <a href="about.html" class="w3-bar-item w3-button w3-padding">ABOUT US</a>
+                <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding ">HOME</a>
+                <a href="" class="w3-bar-item w3-button w3-padding">EXPLORE</a>
+                <a href="{% url 'faq1' %}" class="w3-bar-item w3-button w3-padding">FAQ</a>
+                <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-padding">ABOUT US</a>
             </div>
 
             <div class="w3-panel w3-padding w3-cyan">
@@ -28,7 +31,7 @@
                 
                 <div class="w3-container">
                   
-                  <img src="photo.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                  <img src="{% static 'covid/photo.jpg' %}" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
                   <p> Hey everyone!! I am Dr Kshitij Kumar (M.B.B.S. , M.M.S.T.) and in reponse to the global pandemic of COVID-19
                     I have created this webpage which will contribute towards providing support and information related to COVID-19.
                     My focus would be on evolving techniques to keep a track of changing trends in the disease and most recent updates in terms of R & D and policy making by government.</p><br>
