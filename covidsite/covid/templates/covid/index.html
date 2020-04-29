@@ -37,7 +37,33 @@
 
         <div class="w3-container w3-pale-blue">
             <main>
-                <p> text below the slide show</p>
+                <div>
+                    <button class="accordion w3-light-gray w3-hover-khaki w3-hover-text-black w3-padding w3-margin"><h4>STATEWISE STATUS OF COVID-19  IN INDIA</h4></button>
+                    <div class="panel">
+                        <div class="w3-responsive">
+                            <table class="w3-table w3-striped">
+                                <tr class="w3-indigo">
+                                    <th>STATE</th>
+                                    <th>TOTAL CONFIRMED</th>
+                                    <th class="w3-margin">CURED/RECOVERED/MIGRATED</th>
+                                    <th>DEATH</th>
+                                </tr> 
+                         
+                                {% for items in all %}
+                                <tr class="w3-hover-pale-red">
+                                    <th>{{items.name}}</th>
+                                    <th class="w3-text-purple">{{items.total_confirmed_cases}}</th>
+                                    <th class="w3-text-green">{{items.recovered_cases}}</th>
+                                    <th class="w3-text-red">{{items.death}}</th>
+                         
+                                </tr>
+                                {% endfor %}
+                            </table>
+                         </div>
+                    </div>
+    
+                </div>
+    
                 
             </main>
         </div>

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Statelist
 
 # Create your views here.
 def faq1(request):
@@ -17,7 +18,8 @@ def faq4(request):
 
     
 def index(request):
-    return render(request,'covid/index.html')
+    all_elements = Statelist.objects.all
+    return render(request,'covid/index.html',{'all':all_elements})
 
 def about(request):
     return render(request,'covid/about.html')
