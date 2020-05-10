@@ -9,6 +9,6 @@ class Statelist(models.Model):
     death = models.IntegerField()
 
     def __str__(self):
-        return self.name +' :- '+ '   Total confirmend cases:'+ str(self.total_confirmed_cases)+ '   '+'   Total recovered cases: '+ str(self.recovered_cases)+ ' '+'   Total deaths: ' + str(self.death)
+        return self.name +' :- '+ '  Total confirmend cases:'+ str(self.total_confirmed_cases)+ '   '+'   Total recovered cases: '+ str(self.recovered_cases)+ ' '+'   Total deaths: ' + str(self.death)
 
 
