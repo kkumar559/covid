@@ -15,13 +15,13 @@
         <link rel="stylesheet" href="{% static 'covid/w3.css' %}">
     </head>
     <body>
-        <div class="w3-container w3-pale-blue">
-            
+        <div class="w3-container w3-pale-blue w3-responsive">
+          
             <div class="w3-bar w3-blue">
-                <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding ">HOME</a>
-                <a href="" class="w3-bar-item w3-button w3-padding">EXPLORE</a>
-                <a href="{% url 'faq1' %}" class="w3-bar-item w3-button w3-padding">FAQ</a>
-                <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-padding">ABOUT US</a>
+                <a href="{% url 'home' %}" class="w3-bar-item w3-button ">HOME</a>
+                <a href="" class="w3-bar-item w3-button ">EXPLORE</a>
+                <a href="{% url 'faq1' %}" class="w3-bar-item w3-button ">FAQ</a>
+                <a href="{% url 'about' %}" class="w3-bar-item w3-button ">ABOUT US</a>
             </div>  
         </div>
 
@@ -59,11 +59,21 @@
                          
                                 </tr>
                                 {% endfor %}
+
                             </table>
                          </div>
+                         
                     </div>
-    
                 </div>
+                <div class="w3-card">
+                    <h3> total number of cases :- {{sum}}
+
+                        CURRENTLY UNDER CONSTRUCTION
+
+                       
+                    </h3> 
+
+                 </div>
     
                 
             </main>
